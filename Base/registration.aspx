@@ -68,7 +68,7 @@
 
                 <%-- Submit button --%>
                 <div class="d-flex justify-content-center">
-                    <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn btn-primary btn-block mb-3"  ValidationGroup="registerGroup" />
+                    <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn btn-primary btn-block mb-3" ValidationGroup="registerGroup" OnClick="btnRegister_Click" />
                 </div>
 
                 <p class="text-center text-muted mt-3 mb-0">Have already an account? <a href="login.aspx"

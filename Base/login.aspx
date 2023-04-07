@@ -38,7 +38,7 @@
 
                   <div class="pt-1 mb-4">
                       <!-- Submit button -->
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary btn-lg btn-block mb-3"  ValidationGroup="loginGroup" />
+                    <asp:Button ID="btLogin" runat="server" Text="Login" CssClass="btn btn-primary btn-lg btn-block mb-3" OnClick="btnLogin_Clcik" ValidationGroup="loginGroup" />
                    
                   </div>
 
@@ -51,7 +51,9 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 </section>
 
+
+    
 </asp:Content>

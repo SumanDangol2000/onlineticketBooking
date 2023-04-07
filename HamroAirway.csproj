@@ -74,7 +74,6 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
-    <Content Include="Base\contact.aspx" />
     <Content Include="Base\forgotPassword.aspx" />
     <Content Include="Base\home.aspx" />
     <Content Include="Base\login.aspx" />
@@ -177,13 +176,6 @@
     <Compile Include="Base\base.Master.designer.cs">
       <DependentUpon>base.Master</DependentUpon>
     </Compile>
-    <Compile Include="Base\contact.aspx.cs">
-      <DependentUpon>contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Base\contact.aspx.designer.cs">
-      <DependentUpon>contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Base\forgotPassword.aspx.cs">
       <DependentUpon>forgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -212,6 +204,8 @@
     <Compile Include="Base\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dao\UsersDao.cs" />
+    <Compile Include="Model\Users.cs" />
     <Compile Include="pageNotFound\pageNotFound.aspx.cs">
       <DependentUpon>pageNotFound.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,6 +214,7 @@
       <DependentUpon>pageNotFound.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\DbConnect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\admin.Master" />
