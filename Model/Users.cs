@@ -14,6 +14,8 @@ namespace HamroAirway.Model
         public string phone_number { get; set; }
         public string role { get; set;}
 
+        public string status { get; set;}
+
     }
 }
 

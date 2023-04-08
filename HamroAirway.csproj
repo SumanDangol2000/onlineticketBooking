@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\booking.aspx" />
     <Content Include="Admin\dashboard.aspx" />
     <Content Include="Admin\review.aspx" />
     <Content Include="Admin\user.aspx" />
@@ -78,6 +79,7 @@
     <Content Include="Base\home.aspx" />
     <Content Include="Base\login.aspx" />
     <Content Include="Base\registration.aspx" />
+    <Content Include="Css\main.css" />
     <Content Include="Css_Style\bootstrap-theme.css" />
     <Content Include="Css_Style\bootstrap-theme.min.css" />
     <Content Include="Css_Style\bootstrap.css" />
@@ -147,6 +149,13 @@
     </Compile>
     <Compile Include="Admin\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\booking.aspx.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\booking.aspx.designer.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
@@ -241,7 +250,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
     <Folder Include="User\" />
   </ItemGroup>
   <PropertyGroup>

@@ -31,6 +31,29 @@ namespace HamroAirway.Base
             users.password = registerPassword.Text;
 
             usersDao.RegisterUser(users);
+
+            if(users.status == "success")
+            {
+                ltlMessage.Text = "<h4 style=\" color:green; text-align:center; \"> Register successfully </h4>";
+                clearFiledds();
+            }
+            else
+            {
+                ltlMessage.Text = "<h4 style=\" color:red; text-align:center; \"> Users with '" + registerEmail.Text+"' already exist.</h4>";
+
+            }
+            
+
+        }
+
+        private void clearFiledds()
+        {
+            registerEmail.Text = string.Empty;
+            registerPassword.Text = string.Empty;   
+            registerFirstName.Text = string.Empty;
+            registerLastName.Text = string.Empty;
+            registerPhone.Text = string.Empty;
+
         }
     }
 }

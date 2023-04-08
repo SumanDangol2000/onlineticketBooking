@@ -17,12 +17,13 @@ namespace HamroAirway.Dao
         SqlCommand cmd;
         public void RegisterUser(Users users)
         {
-            //string cmdText = "SELECT * FROM users WHERE email=" + users.email;
-            //SqlCommand cmd = new SqlCommand(cmdText, dbConnect.conn);
-            //int data = Convert.ToInt32(cmd.ExecuteScalar());
+            cmdText = "SELECT * FROM users WHERE email=@email";
+            SqlCommand cmd = new SqlCommand(cmdText, dbConnect.conn);
+            cmd.Parameters.AddWithValue("@email", users.email);
+            int data = Convert.ToInt32(cmd.ExecuteScalar());
 
-            //if (data == 0)
-            //{
+            if (data == 0)
+            {
                 cmdText = "INSERT INTO users (first_name, last_name, email, phone_number, password, role ) VALUES (@first_name, @last_name, @email, @phone_number, @password, @role )";
                 cmd = new SqlCommand(cmdText, dbConnect.conn);
                 cmd.Parameters.AddWithValue("@first_name", users.first_name);
@@ -32,11 +33,16 @@ namespace HamroAirway.Dao
                 cmd.Parameters.AddWithValue("@password", FormsAuthentication.HashPasswordForStoringInConfigFile(users.password, "sha1"));
                 cmd.Parameters.AddWithValue("@role", "Normal");
                 cmd.ExecuteNonQuery();
-            //}
-            //else
-            //{
+                users.status = "success";
+                dbConnect.conn.Close();
 
-            //}
+            }
+            else
+            {
+                users.status = "fail";
+                dbConnect.conn.Close();
+
+            }
 
 
         }
