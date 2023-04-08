@@ -27,8 +27,9 @@
             <div class="list-group list-group-flush my-3">
                 <a href="dashboard.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Dashboard</a>
                 <a href="user.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Users</a>
-                <a href="booking.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Bookings</a>
-                <a href="review.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Review</a>
+                <a href="flight.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Flights</a>
+                <a href="airline.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Airlines</a>
+                <a href="review.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Reviews</a>
                 <a href="#" class="list-group-item list-group-item-action " >
                     <asp:Button ID="btnLogout" runat="server" Text="Logout" class=" bg-transparent second-text fw-bold border-0 p-0" OnClick="btnLogout_Click" />
                 </a>
@@ -36,15 +37,25 @@
             </div>
         </div>
 
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                </div>
 
 
+                <div class="text-center" id="navbarSupportedContent">
+                    <i class="fas fa-user me-2"></i>John Doe
+                </div>
+            </nav>
+        
 
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-
-             </div>
+        </div>
+     </div>
     </form>
 
     <%-- Bootstrap script --%>

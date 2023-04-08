@@ -67,7 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\booking.aspx" />
+    <Content Include="Admin\airline.aspx" />
+    <Content Include="Admin\flight.aspx" />
     <Content Include="Admin\dashboard.aspx" />
     <Content Include="Admin\review.aspx" />
     <Content Include="Admin\user.aspx" />
@@ -150,12 +151,19 @@
     <Compile Include="Admin\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\booking.aspx.cs">
-      <DependentUpon>booking.aspx</DependentUpon>
+    <Compile Include="Admin\airline.aspx.cs">
+      <DependentUpon>airline.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\booking.aspx.designer.cs">
-      <DependentUpon>booking.aspx</DependentUpon>
+    <Compile Include="Admin\airline.aspx.designer.cs">
+      <DependentUpon>airline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\flight.aspx.cs">
+      <DependentUpon>flight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\flight.aspx.designer.cs">
+      <DependentUpon>flight.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>

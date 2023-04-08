@@ -3,23 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-   
-        
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                </div>
-
-
-                <div class="text-center" id="navbarSupportedContent">
-                    <i class="fas fa-user me-2"></i>John Doe
-                </div>
-            </nav>
-            <h1 class="text-center">Dashboard</h1>
+            
             <div class="container-fluid px-4">
+                <h1 class="text-center">Dashboard</h1>
                 <div class="row g-3 my-2">
                     <div class="col-md-6">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
@@ -48,7 +35,7 @@
                         <div class="table-responsive">
                         <h3 class="fs-4 mb-3">USERS</h3>
                         <asp:GridView ID="GridViewUser" runat="server"  AutoGenerateColumns="False" Width="100%" DataKeyNames="user_id"
-                              OnPageIndexChanging="OnPageIndexChanging_User" PageSize="5" CssClass="table table-bordered table-condensed table-hover" >
+                              OnPageIndexChanging="OnPageIndexChanging_User" PageSize="5" CssClass="table table-bordered table-condensed table-hover" AllowPaging="True">
                             <Columns>
                                 <asp:BoundField DataField="user_id" HeaderText="user id" ReadOnly="True" InsertVisible="False" SortExpression="user_id"></asp:BoundField>
                                 <asp:BoundField DataField="first_name" HeaderText="first name" SortExpression="first_name"></asp:BoundField>
@@ -89,6 +76,6 @@
     </div>
 
   </div>
-</div>
+
     
 </asp:Content>

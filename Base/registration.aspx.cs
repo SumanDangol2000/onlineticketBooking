@@ -53,6 +53,7 @@ namespace HamroAirway.Base
             registerFirstName.Text = string.Empty;
             registerLastName.Text = string.Empty;
             registerPhone.Text = string.Empty;
+            registerRepeatPassword.Text = string.Empty;
 
         }
     }

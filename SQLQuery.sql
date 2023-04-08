@@ -57,6 +57,14 @@ CREATE TABLE airlines (
   address VARCHAR(100) NOT NULL,
 );
 
+CREATE TABLE reviews (
+  review_id INT PRIMARY KEY IDENTITY(1000,1),
+  user_id int,
+  email VARCHAR(50) NOT NULL,
+  message VARCHAR(100) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+
+);
 
 
 
