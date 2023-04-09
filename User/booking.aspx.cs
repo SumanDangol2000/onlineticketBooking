@@ -23,7 +23,7 @@ namespace HamroAirway.User
         public void loadFlightData()
         {
             DbConnect dbConnect = new DbConnect();
-            string cmdText = "SELECT f.flight_id, f.flight_number, f.departure_airport, f.arrival_airport , f.departure_time , f.arrival_time , f.duration, a.airline_name FROM flights f " +
+            string cmdText = "SELECT f.flight_id, f.flight_number, f.departure_airport, f.arrival_airport , f.departure_time , f.arrival_time , f.duration, f.price, a.airline_name FROM flights f " +
                 "INNER JOIN airlines a on a.airline_id = f.airline_id";
             SqlCommand cmd = new SqlCommand(cmdText, dbConnect.conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -73,7 +73,7 @@ namespace HamroAirway.User
         public void GridView_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow row = GridViewFlight.SelectedRow;
-            Response.Redirect("payment.aspx?flight_id="+ row.Cells[0].Text +"&departure=" + row.Cells[3].Text + "&arrival=" + row.Cells[4].Text + "&date="+ row.Cells[5].Text );
+            Response.Redirect("payment.aspx?flight_id="+ row.Cells[0].Text +"&departure=" + row.Cells[3].Text + "&arrival=" + row.Cells[4].Text + "&date="+ row.Cells[5].Text +"&price=" + row.Cells[8].Text);
         }
     }
 }

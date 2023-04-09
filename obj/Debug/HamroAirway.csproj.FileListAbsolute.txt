@@ -57,3 +57,6 @@ D:\HamroAirway\obj\Debug\HamroAirway.csproj.CoreCompileInputs.cache
 D:\HamroAirway\obj\Debug\HamroAirway.csproj.CopyComplete
 D:\HamroAirway\obj\Debug\HamroAirway.dll
 D:\HamroAirway\obj\Debug\HamroAirway.pdb
+D:\HamroAirway\bin\BouncyCastle.Crypto.dll
+D:\HamroAirway\bin\itextsharp.dll
+D:\HamroAirway\bin\itextsharp.xml

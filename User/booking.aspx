@@ -48,6 +48,7 @@
                             <asp:BoundField DataField="departure_time" HeaderText="Departure time" SortExpression="departure_time"></asp:BoundField>
                             <asp:BoundField DataField="arrival_time" HeaderText="Arrival time" SortExpression="arrival_time"></asp:BoundField>
                             <asp:BoundField DataField="duration" HeaderText="Duration" SortExpression="duration"></asp:BoundField>
+                            <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price"></asp:BoundField>
                             <asp:CommandField SelectText="Book ticket" ShowSelectButton="True" ButtonType="Button" HeaderText="Action"></asp:CommandField>
                         </Columns>
                     </asp:GridView>
