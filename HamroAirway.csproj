@@ -68,8 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\airline.aspx" />
-    <Content Include="Admin\flight.aspx" />
     <Content Include="Admin\dashboard.aspx" />
+    <Content Include="Admin\flight.aspx" />
     <Content Include="Admin\review.aspx" />
     <Content Include="Admin\user.aspx" />
     <Content Include="App_Data\Database.mdf" />
@@ -141,6 +141,8 @@
     <Content Include="Js_Script\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="Js_Script\vendor\npm.js" />
     <Content Include="pageNotFound\pageNotFound.aspx" />
+    <Content Include="User\booking.aspx" />
+    <Content Include="User\payment.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,19 +160,19 @@
     <Compile Include="Admin\airline.aspx.designer.cs">
       <DependentUpon>airline.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\flight.aspx.cs">
-      <DependentUpon>flight.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\flight.aspx.designer.cs">
-      <DependentUpon>flight.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\flight.aspx.cs">
+      <DependentUpon>flight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\flight.aspx.designer.cs">
+      <DependentUpon>flight.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\review.aspx.cs">
       <DependentUpon>review.aspx</DependentUpon>
@@ -231,6 +233,27 @@
       <DependentUpon>pageNotFound.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\booking.aspx.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\booking.aspx.designer.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DbConnect.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +273,7 @@
     <Content Include="Font\glyphicons-halflings-regular.ttf" />
     <Content Include="Font\glyphicons-halflings-regular.woff" />
     <None Include="packages.config" />
+    <Content Include="User\user.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -257,9 +281,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

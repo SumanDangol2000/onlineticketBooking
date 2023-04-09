@@ -16,7 +16,7 @@ namespace HamroAirway.Admin
         {
             if (!IsPostBack)
             {
-                loadAirlineData();
+                loadFlightData();
             }
             
         }
@@ -31,14 +31,14 @@ namespace HamroAirway.Admin
             cmd.ExecuteNonQuery();
             dbConnect.conn.Close();
 
-            loadAirlineData();
+            loadFlightData();
 
         }
 
         protected void GridViewAirline_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridViewAirline.EditIndex = e.NewEditIndex;
-            loadAirlineData();
+            loadFlightData();
         }
         protected void GridViewAirline_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
@@ -56,16 +56,16 @@ namespace HamroAirway.Admin
             dbConnect.conn.Close();
             GridViewAirline.EditIndex = -1;
 
-            loadAirlineData();
+            loadFlightData();
         }
         protected void GridViewAirline_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridViewAirline.EditIndex = -1;
-            loadAirlineData();
+            loadFlightData();
         }
 
 
-        public void loadAirlineData()
+        public void loadFlightData()
         {
             DbConnect dbConnect = new DbConnect();
             string cmdText = "SELECT * FROM airlines";
@@ -82,7 +82,7 @@ namespace HamroAirway.Admin
         protected void OnPageIndexChanging_Airline(object sender, GridViewPageEventArgs e)
         {
             GridViewAirline.PageIndex = e.NewPageIndex;
-            loadAirlineData();
+            loadFlightData();
 
         }
 
