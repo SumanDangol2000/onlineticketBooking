@@ -13,5 +13,12 @@ namespace HamroAirway.User
         {
 
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("../base/home.aspx");
+        }
     }
 }

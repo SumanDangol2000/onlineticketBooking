@@ -11,19 +11,19 @@
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="txtairline" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
                         <asp:Label ID="lblRegisterFirstName" runat="server" Text="Airline Name" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter your first name." ControlToValidate="txtairline" ForeColor="Red" ValidationGroup="flightGroup"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter your first name." ControlToValidate="txtairline" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Last name input -->
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="txtairlineAdd" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
                         <asp:Label ID="Label1" runat="server" Text="Address" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter your last name." ControlToValidate="txtairlineAdd" ForeColor="Red" ValidationGroup="flightGroup"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter your last name." ControlToValidate="txtairlineAdd" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
                      <div class="pt-1 mb-4 ">
                         <!-- Submit button -->
-                         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="flightGroup" OnClick="btnSave_Click" />
+                         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
                     </div>
             </div>
 

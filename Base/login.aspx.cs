@@ -38,7 +38,7 @@ namespace HamroAirway.Base
                 switch(dr["role"].ToString())
                 {
                     case "Normal":
-                        Response.Redirect("../User/user.aspx");
+                        Response.Redirect("../User/booking.aspx");
                         break;
 
                     case "Admin":
