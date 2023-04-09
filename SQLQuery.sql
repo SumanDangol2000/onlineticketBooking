@@ -1,5 +1,6 @@
 ﻿
 
+
 CREATE TABLE flights (
   flight_id INT PRIMARY KEY IDENTITY(1,1),
   flight_number VARCHAR(10) NOT NULL,

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HamroAirway.Admin
+namespace HamroAirway.User
 {
 
 
-    public partial class flight
+    public partial class payment
     {
 
         /// <summary>
@@ -24,6 +24,24 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.TextBox txtFlightNumber;
 
         /// <summary>
+        /// Label9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label9;
+
+        /// <summary>
+        /// txtFrom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFrom;
+
+        /// <summary>
         /// lblFlightNumber control.
         /// </summary>
         /// <remarks>
@@ -33,22 +51,13 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.Label lblFlightNumber;
 
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// txtTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-
-        /// <summary>
-        /// txtDepartureAirport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartureAirport;
+        protected global::System.Web.UI.WebControls.TextBox txtTo;
 
         /// <summary>
         /// Label1 control.
@@ -60,22 +69,13 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// txtdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-
-        /// <summary>
-        /// txtArrivalAirport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrivalAirport;
+        protected global::System.Web.UI.WebControls.TextBox txtdate;
 
         /// <summary>
         /// Label2 control.
@@ -87,22 +87,13 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
-        /// <summary>
-        /// txtDepartureTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartureTime;
+        protected global::System.Web.UI.WebControls.TextBox txtUserName;
 
         /// <summary>
         /// Label3 control.
@@ -114,22 +105,13 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-
-        /// <summary>
-        /// txtArrivalTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrivalTime;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
         /// Label4 control.
@@ -141,22 +123,13 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-
-        /// <summary>
-        /// txtDuration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDuration;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// Label5 control.
@@ -168,22 +141,13 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// RequiredFieldValidator6 control.
+        /// txtCardType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-
-        /// <summary>
-        /// txtAirlineId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAirlineId;
+        protected global::System.Web.UI.WebControls.TextBox txtCardType;
 
         /// <summary>
         /// Label6 control.
@@ -204,21 +168,84 @@ namespace HamroAirway.Admin
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
-        /// btnSave control.
+        /// txtCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.TextBox txtCardNumber;
 
         /// <summary>
-        /// GridViewFlight control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewFlight;
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// RequiredFieldValidator8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+
+        /// <summary>
+        /// txtCardPin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCardPin;
+
+        /// <summary>
+        /// Label8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label8;
+
+        /// <summary>
+        /// RequiredFieldValidator9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
+
+        /// <summary>
+        /// btnPay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPay;
+
+        /// <summary>
+        /// btnClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClear;
+
+        /// <summary>
+        /// btnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }
