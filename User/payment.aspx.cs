@@ -21,22 +21,28 @@ namespace HamroAirway.User
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //txtFlightNumber.Text = Request.QueryString["flight_id"].ToString();
-            //txtFrom.Text = Request.QueryString["departure"].ToString();
-            //txtTo.Text = Request.QueryString["arrival"].ToString();
-            //txtdate.Text = Request["date"].ToString();
-            //txtPrice.Text = Request["price"].ToString();
+            txtFlightNumber.Text = Request.QueryString["flight_id"].ToString();
+            txtFrom.Text = Request.QueryString["departure"].ToString();
+            txtTo.Text = Request.QueryString["arrival"].ToString();
+            txtdate.Text = Request["date"].ToString();
+            txtPrice.Text = Request["price"].ToString();
             txtTicketNum.Text = "1";
-            //txtUserName.Text = Session["name"].ToString();
-            //txtPhone.Text = Session["phone"].ToString();
-            //txtEmail.Text = Session["email"].ToString();
+            txtUserName.Text = Session["name"].ToString();
+            txtPhone.Text = Session["phone"].ToString();
+            txtEmail.Text = Session["email"].ToString();
         }
 
         protected void btnPay_Click(object sender, EventArgs e)
         {
 
+            setBooking();
+
+            setPayment();
+
             clearFields();
+
             printTicket();
+
             
         }
 
@@ -69,13 +75,12 @@ namespace HamroAirway.User
         public void setPayment()
         {
 
-            int id = getBookingId();
-
             Payment payment = new Payment();
             PaymentDao paymentDao = new PaymentDao();
-            payment.booking_id = id;
-            payment.amount = Convert.ToDouble(txtTicketNum.Text);
+            payment.booking_id = getBookingId();
+            payment.amount = Convert.ToInt32(txtTicketNum.Text) * Convert.ToDouble(Request["price"].ToString());
             payment.date = Convert.ToString(DateTime.Now);
+
             paymentDao.savePaymnet(payment);
         }
 
@@ -88,13 +93,15 @@ namespace HamroAirway.User
             booking.booking_date = Convert.ToString(DateTime.Now);
             booking.no_of_booking= Convert.ToInt32(txtTicketNum.Text);
             booking.total_cost = Convert.ToInt32(txtTicketNum.Text) * Convert.ToDouble(Request["price"].ToString());
+
+            bookingDao.saveBooking(booking);    
         }
 
         public int getBookingId()
         {
 
             DbConnect dbConnect = new DbConnect();
-            string cmdText = "SELECT TOP 1 * FROM bookings order by booking_id desc";
+            string cmdText = "SELECT TOP 1 * FROM bookings order by booking_id DESC";
             SqlCommand cmd = new SqlCommand(cmdText, dbConnect.conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable(); 

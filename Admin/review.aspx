@@ -3,8 +3,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container px-4">
-        <h1 class="text-center">Review</h1>
+    <div class=" px-4" style="background-color:antiquewhite; height:100vh" >
+        <h1 class="text-center py-5">Review</h1>
 
       
         <div class="row my-5">

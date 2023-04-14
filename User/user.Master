@@ -21,6 +21,7 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary border-2 border-bottom">
                 <div class="container-fluid ">
                     <a class="navbar-brand" href="#"> <img  src="../images/logo.png" alt="Company Logo" /> </a>
+                    <p> Welcome, <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label> </p>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

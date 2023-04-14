@@ -3,8 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <div class="container-fluid px-4">
-        <h1 class="text-center">Users </h1>
+    <div class="container-fluid px-4 " style="background-color:antiquewhite; height:100%;">
+        <h1 class="text-center py-5">Users </h1>
          <div class="row g-3 my-2">
                  <div class="row">
                      <!-- First name input -->
@@ -55,6 +55,8 @@
                     <div class="pt-1 mb-4 ">
                         <!-- Submit button -->
                         <asp:Button ID="btLogin" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="registerUserGroup" OnClick="btSave_Click" />
+                        <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-warning btn-lg btn-block mb-3" Width="250"  OnClick="btnClear_Click" />
+                    
                     </div>
                  </div>   
 

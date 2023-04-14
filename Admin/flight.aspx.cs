@@ -54,6 +54,8 @@ namespace HamroAirway.Admin
 
             loadFlightData();
 
+            clearFiledds();
+
         }
 
         protected void GridViewFlight_RowEditing(object sender, GridViewEditEventArgs e)
@@ -118,6 +120,10 @@ namespace HamroAirway.Admin
 
         }
 
-        
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clearFiledds();
+
+        }
     }
 }

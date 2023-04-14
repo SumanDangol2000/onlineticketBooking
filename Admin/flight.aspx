@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid px-4">
-        <h1 class="text-center">Flights</h1>
+    <div class="container-fluid px-4" style="background-color:antiquewhite; height:100vh">
+        <h1 class="text-center py-5">Flights</h1>
 
         <div class="row g-3 my-2">
                  <div class="row">
@@ -56,7 +56,9 @@
                      <div class="pt-1 mb-4 ">
                         
                          <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
-                    </div>
+                         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-warning btn-lg btn-block mb-3" Width="250" OnClick="btnClear_Click" />
+                    
+                     </div>
             </div>
 
             <div class="row my-5">

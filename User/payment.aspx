@@ -113,7 +113,7 @@
         Do you want to Pay?
       </div>
       <div class="modal-footer">
-        <asp:Button ID="btnPay" runat="server" Text="YES" CssClass="btn btn-success  btn-block mt-2 py-1.5" Width="80" OnClick="btnPay_Click" data-dismiss="modal"/>
+        <asp:Button ID="btnPay" runat="server" Text="YES" CssClass="btn btn-success  btn-block mt-2 py-1.5" Width="80" OnClick="btnPay_Click" data-bs-dismiss="modal"/>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">NO</button>
       </div>
     </div>

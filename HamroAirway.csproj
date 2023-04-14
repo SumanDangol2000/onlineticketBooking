@@ -88,17 +88,6 @@
     <Content Include="Base\login.aspx" />
     <Content Include="Base\registration.aspx" />
     <Content Include="Css\main.css" />
-    <Content Include="Css_Style\bootstrap-theme.css" />
-    <Content Include="Css_Style\bootstrap-theme.min.css" />
-    <Content Include="Css_Style\bootstrap.css" />
-    <Content Include="Css_Style\bootstrap.min.css" />
-    <Content Include="Css_Style\datepicker.css" />
-    <Content Include="Css_Style\fontAwesome.css" />
-    <Content Include="Css_Style\fonts\flexslider-icon.svg" />
-    <Content Include="Css_Style\hero-slider.css" />
-    <Content Include="Css_Style\main.css" />
-    <Content Include="Css_Style\owl-carousel.css" />
-    <Content Include="Css_Style\tooplate-style.css" />
     <Content Include="Font\fontawesome-webfont.svg" />
     <Content Include="Font\glyphicons-halflings-regular.svg" />
     <Content Include="Images\404NotFound.png" />
@@ -239,11 +228,6 @@
   <ItemGroup>
     <Content Include="Admin\admin.Master" />
     <Content Include="Base\base.Master" />
-    <Content Include="Css_Style\bootstrap-theme.css.map" />
-    <Content Include="Css_Style\bootstrap.css.map" />
-    <Content Include="Css_Style\fonts\flexslider-icon.eot" />
-    <Content Include="Css_Style\fonts\flexslider-icon.ttf" />
-    <Content Include="Css_Style\fonts\flexslider-icon.woff" />
     <Content Include="Font\fontawesome-webfont.eot" />
     <Content Include="Font\fontawesome-webfont.ttf" />
     <Content Include="Font\fontawesome-webfont.woff" />

@@ -14,7 +14,7 @@ namespace HamroAirway.Dao
         public void saveBooking(Booking booking)
         {
             DbConnect dbConnect = new DbConnect();
-            string cmdText = "INSERT INTO flights (user_id, flight_id, booking_date, number_of_booking, total_cost ) VALUES" +
+            string cmdText = "INSERT INTO bookings (user_id, flight_id, booking_date, number_of_booking, total_cost ) VALUES" +
                 " (@user_id, @flight_id, @booking_date, @number_of_booking, @total_cost)";
             SqlCommand cmd = new SqlCommand(cmdText, dbConnect.conn);
             cmd.Parameters.AddWithValue("@user_id", booking.user_id);
