@@ -121,13 +121,10 @@ namespace HamroAirway.User
             // Create a new PDF document
             Document document = new Document();
 
-            // Create a new MemoryStream to write the PDF file
             MemoryStream memoryStream = new MemoryStream();
 
-            // Create a PdfWriter instance to write the PDF file to the MemoryStream
             PdfWriter.GetInstance(document, memoryStream);
 
-            // Open the document
             document.Open();
 
             // Create a new Paragraph with the event name and date

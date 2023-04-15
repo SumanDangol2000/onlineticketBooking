@@ -36,6 +36,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+    <p class="text-center"> <asp:Literal ID="ltlReviewMessage" runat="server"></asp:Literal> </p>
+
     <div class="container py-4">
 
     <%-- landing image and content --%>
@@ -194,11 +197,36 @@
     <%-- Footer --%>
  <footer class="bg-light mt-5 " id="contact">
      <%-- Contact --%>
-    <div class="text-center pb-5 pt-3">
-        <h1 class="text-uppercase mb-4">Contact</h1>
-        <p>Phone number : +977-9812345512, +977-1234567</p>
-        <p>Email : HamroAirway@mail.com</p>
-        <p>Address : Maitidevi, Kathmandu Nepal.</p>
+     <h1 class="text-uppercase my-4 text-center">Contact</h1>
+    <div class="container">
+        <div class="row">
+            <div class="text-center pb-5 pt-3 col-md-6">
+                <h4 class="my-3">Company information</h4>
+                <p>Phone number : +977-9812345512, +977-1234567</p>
+                <p>Email : HamroAirway@mail.com</p>
+                <p>Address : Maitidevi, Kathmandu Nepal.</p>
+            </div>
+            <div class="text-center pb-5 pt-3 col-md-6">
+                <h4 class="my-3">Users review</h4>
+
+                <div class="form-outline mb-4">
+                    <asp:Label ID="lblEmailReview" runat="server" Text="Email" CssClass="form-label" ></asp:Label>
+                    <asp:TextBox ID="txtEmailReview" runat="server" CssClass="form-control input-lg" ></asp:TextBox>                    
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter your valid email." ControlToValidate="txtEmailReview" ForeColor="Red" Display="Dynamic" ValidationGroup="reviewGroup"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid email expression!" Display="Dynamic" ControlToValidate="txtEmailReview" ForeColor="Red" ValidationGroup="reviewGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                
+                </div>
+                  <div class="form-outline mb-4">
+                    <asp:Label ID="lblMessageReview" runat="server" Text="Message" CssClass="form-label" ></asp:Label>
+                      <asp:TextBox ID="txtMessageReview" TextMode="MultiLine" CssClass="form-control input-lg" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter some message." ControlToValidate="txtMessageReview" ForeColor="Red" Display="Dynamic" ValidationGroup="reviewGroup"></asp:RequiredFieldValidator>
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <asp:Button ID="btnSend" runat="server" Text="Send" class="btn btn-primary btn-block mb-3 w-50" ValidationGroup="reviewGroup" OnClick="btnSend_Click" />
+                </div>
+            </div>
+        </div>
+
     </div>
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
