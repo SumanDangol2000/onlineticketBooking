@@ -131,38 +131,52 @@ namespace HamroAirway.User
             document.Open();
 
             // Create a new Paragraph with the event name and date
-            Paragraph eventInfo = new Paragraph("Ticket detials" + "\n" + DateTime.Now);
+            Paragraph eventInfo = new Paragraph("E-Ticket (Customer copy)");
             eventInfo.Alignment = Element.ALIGN_CENTER;
             document.Add(eventInfo);
 
             document.Add(new Paragraph("\n"));
+            document.Add(new Paragraph("\n"));
+            document.Add(new Paragraph("\n"));
 
-            // Create a table to display the ticket information
-            PdfPTable table = new PdfPTable(4);
-            table.WidthPercentage = 100;
+            Paragraph userDetail = new Paragraph("User details");
+            document.Add(userDetail);
+            document.Add(new Paragraph("\n"));
 
-            // Add the ticket holder name and ticket number to the table
-            PdfPCell cell11 = new PdfPCell(new Phrase("Ticket Number: " + ticketNumber));
-            PdfPCell cell12 = new PdfPCell(new Phrase("Passanger Name: " + Session["name"].ToString()));
-            PdfPCell cell13 = new PdfPCell(new Phrase("Phone Number: " + Session["phone"].ToString()));
-            PdfPCell cell14 = new PdfPCell(new Phrase("Email Address: " + Session["email"].ToString()));
-            table.AddCell(cell11);
-            table.AddCell(cell12);
-            table.AddCell(cell13);
-            table.AddCell(cell14);
+            Paragraph userName = new Paragraph("Passenger name : " + Session["name"].ToString());
+            Paragraph userEmail = new Paragraph("Passenger email : " + Session["email"].ToString());
+            Paragraph userPhone = new Paragraph("Passenger phone : " + Session["phone"].ToString());
+            Paragraph purchaseDate = new Paragraph("Purchase date : " + DateTime.Now);
+            document.Add(userName);
+            document.Add(userPhone);
+            document.Add(userEmail);
+            document.Add(purchaseDate);
 
-            // Add the event venue and organizer to the table
-            PdfPCell cell21 = new PdfPCell(new Phrase("Flight ID: " + Request.QueryString["flight_id"].ToString()));
-            PdfPCell cell22 = new PdfPCell(new Phrase("Departure location: " + Request.QueryString["departure"].ToString()));
-            PdfPCell cell23 = new PdfPCell(new Phrase("Arrival location: " + Request.QueryString["arrival"].ToString()));
-            PdfPCell cell24 = new PdfPCell(new Phrase("Date/time: " + Request.QueryString["date"].ToString()));
+            document.Add(new Paragraph("\n"));
+            document.Add(new Paragraph("\n"));
 
-            table.AddCell(cell21);
-            table.AddCell(cell22);
-            table.AddCell(cell23);
-            table.AddCell(cell24);
-            document.Add(table);
+            Paragraph ticketDetail = new Paragraph("Ticket details");
+            document.Add(ticketDetail);
+            document.Add(new Paragraph("\n"));
 
+            Paragraph tickketNumber = new Paragraph("Ticket number : " + ticketNumber);
+            Paragraph flightId = new Paragraph("Flight number : " + Request.QueryString["flight_id"].ToString());
+            Paragraph departureLocation = new Paragraph("Departure location : " + Request.QueryString["departure"].ToString());
+            Paragraph arrivalLocation = new Paragraph("Arrival location : " + Request.QueryString["arrival"].ToString());
+            Paragraph departureDate = new Paragraph("Departure date: " + Request.QueryString["date"].ToString());
+            document.Add(tickketNumber);
+            document.Add(flightId);
+            document.Add(departureLocation);
+            document.Add(arrivalLocation);
+            document.Add(departureDate);
+
+            document.Add(new Paragraph("\n"));
+
+            Paragraph contactDetail = new Paragraph("Contact information :");
+            document.Add(contactDetail);
+
+            Paragraph address = new Paragraph("Email : hamroairway@gmail.com \nPhone : +977-9812345512, +977-1234567 ");
+            document.Add(address);
             // Close the document
             document.Close();
 
