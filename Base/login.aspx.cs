@@ -35,6 +35,7 @@ namespace HamroAirway.Base
                 Session["name"] = dr["first_name"].ToString() + " " + dr["last_name"].ToString();
                 Session["email"] = dr["email"];
                 Session["phone"] = dr["phone_number"];
+                Session["role"] = dr["role"].ToString();
                 switch(dr["role"].ToString())
                 {
                     case "Normal":

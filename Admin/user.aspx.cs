@@ -113,5 +113,10 @@ namespace HamroAirway.Admin
 
         }
 
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clearFiledds();
+          
+        }
     }
 }

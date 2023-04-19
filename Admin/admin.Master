@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>HamroAirway | Admin</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -18,13 +18,13 @@
 <body>
     <form id="form1" runat="server">
 
-         <div class="d-flex" id="wrapper">
+         <div class="d-flex" id="wrapper" >
         <!-- Sidebar -->
-        <div class="bg-white" id="sidebar-wrapper">
+        <div class="bg-blue" id="sidebar-wrapper" >
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                      <img  src="../images/logo.png" alt="Company Logo"   width="200"/> 
             </div>
-            <div class="list-group list-group-flush my-3">
+            <div class="list-group list-group-flush my-3" >
                 <a href="dashboard.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Dashboard</a>
                 <a href="user.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Users</a>
                 <a href="flight.aspx" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Flights</a>
@@ -37,15 +37,15 @@
             </div>
         </div>
 
-        <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+        <div id="page-content-wrapper" >
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4 border-bottom"  style="height:109px;">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
                 </div>
 
 
                 <div class="text-center" id="navbarSupportedContent">
-                    <i class="fas fa-user me-2"></i>John Doe
+                    <i class="fas fa-user me-2"></i>Welcome, <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
                 </div>
             </nav>
         

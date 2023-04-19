@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DynamicData" />
@@ -82,52 +88,10 @@
     <Content Include="Base\login.aspx" />
     <Content Include="Base\registration.aspx" />
     <Content Include="Css\main.css" />
-    <Content Include="Css_Style\bootstrap-theme.css" />
-    <Content Include="Css_Style\bootstrap-theme.min.css" />
-    <Content Include="Css_Style\bootstrap.css" />
-    <Content Include="Css_Style\bootstrap.min.css" />
-    <Content Include="Css_Style\datepicker.css" />
-    <Content Include="Css_Style\fontAwesome.css" />
-    <Content Include="Css_Style\fonts\flexslider-icon.svg" />
-    <Content Include="Css_Style\hero-slider.css" />
-    <Content Include="Css_Style\main.css" />
-    <Content Include="Css_Style\owl-carousel.css" />
-    <Content Include="Css_Style\tooplate-style.css" />
     <Content Include="Font\fontawesome-webfont.svg" />
     <Content Include="Font\glyphicons-halflings-regular.svg" />
     <Content Include="Images\404NotFound.png" />
     <Content Include="Images\service1.png" />
-    <Content Include="Imagess\banner-bg.jpg" />
-    <Content Include="Imagess\close.png" />
-    <Content Include="Imagess\contact-01.jpg" />
-    <Content Include="Imagess\contact-02.jpg" />
-    <Content Include="Imagess\contact-bg.jpg" />
-    <Content Include="Imagess\evening-event.jpg" />
-    <Content Include="Imagess\fitness-service.jpg" />
-    <Content Include="Imagess\heading-bg.jpg" />
-    <Content Include="Imagess\loading.gif" />
-    <Content Include="Imagess\logo.png" />
-    <Content Include="Imagess\massage-service.jpg" />
-    <Content Include="Imagess\next.png" />
-    <Content Include="Imagess\place-01.jpg" />
-    <Content Include="Imagess\place-02.jpg" />
-    <Content Include="Imagess\place-03.jpg" />
-    <Content Include="Imagess\place-04.jpg" />
-    <Content Include="Imagess\prev.png" />
-    <Content Include="Imagess\service-icon-01.1.png" />
-    <Content Include="Imagess\service-icon-01.png" />
-    <Content Include="Imagess\service-icon-02.2.png" />
-    <Content Include="Imagess\service-icon-02.png" />
-    <Content Include="Imagess\service-icon-03.3.png" />
-    <Content Include="Imagess\service-icon-03.png" />
-    <Content Include="Imagess\suite-01.jpg" />
-    <Content Include="Imagess\suite-02.jpg" />
-    <Content Include="Imagess\suite-03.jpg" />
-    <Content Include="Imagess\swiming-pool.jpg" />
-    <Content Include="Imagess\weather-bg.jpg" />
-    <Content Include="Imagess\weather-icon-01.png" />
-    <Content Include="Imagess\weather-icon-02.png" />
-    <Content Include="Imagess\weather-icon-03.png" />
     <Content Include="Images\bg_image.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\service2.png" />
@@ -224,7 +188,11 @@
     <Compile Include="Base\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dao\BookingDao.cs" />
+    <Compile Include="Dao\PaymentDao.cs" />
     <Compile Include="Dao\UsersDao.cs" />
+    <Compile Include="Model\Booking.cs" />
+    <Compile Include="Model\Payment.cs" />
     <Compile Include="Model\Users.cs" />
     <Compile Include="pageNotFound\pageNotFound.aspx.cs">
       <DependentUpon>pageNotFound.aspx</DependentUpon>
@@ -260,11 +228,6 @@
   <ItemGroup>
     <Content Include="Admin\admin.Master" />
     <Content Include="Base\base.Master" />
-    <Content Include="Css_Style\bootstrap-theme.css.map" />
-    <Content Include="Css_Style\bootstrap.css.map" />
-    <Content Include="Css_Style\fonts\flexslider-icon.eot" />
-    <Content Include="Css_Style\fonts\flexslider-icon.ttf" />
-    <Content Include="Css_Style\fonts\flexslider-icon.woff" />
     <Content Include="Font\fontawesome-webfont.eot" />
     <Content Include="Font\fontawesome-webfont.ttf" />
     <Content Include="Font\fontawesome-webfont.woff" />

@@ -11,7 +11,14 @@ namespace HamroAirway.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["role"] != null)
+            {
+                lblUserName.Text = Session["name"].ToString();
+            }
+            else{
+                Response.Redirect("../pageNotFound/pageNotFound.aspx");
+                
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

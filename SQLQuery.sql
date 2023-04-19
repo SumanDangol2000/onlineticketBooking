@@ -13,15 +13,6 @@ CREATE TABLE flights (
   FOREIGN KEY (airline_id) REFERENCES airlines(airline_id),
 );
 
-CREATE TABLE seats (
-  seat_id INT NOT NULL PRIMARY KEY IDENTITY(10,1),
-  flight_id INT NOT NULL,
-  seat_number VARCHAR(10) NOT NULL,
-  class VARCHAR(20) NOT NULL,
-  price DECIMAL(10,2) NOT NULL,
-  FOREIGN KEY (flight_id) REFERENCES flights(flight_id)
-);
-
 
 CREATE TABLE users (
   user_id INT NOT NULL PRIMARY KEY IDENTITY(100,1),

@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container px-4">
-        <h1 class="text-center">Airline</h1>
+    <div class=" px-4" style="background-color:antiquewhite; height:100vh" >
+        <h1 class="text-center py-5">Airline</h1>
 
         <div class="row g-3 my-2">
                  <div class="row">
@@ -24,7 +24,8 @@
                      <div class="pt-1 mb-4 ">
                         <!-- Submit button -->
                          <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
-                    </div>
+                         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-warning btn-lg btn-block mb-3" Width="250"  OnClick="btnClear_Click" />                    
+                     </div>
             </div>
 
       
@@ -40,7 +41,6 @@
                             <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address"></asp:BoundField>
                             <asp:CommandField ShowEditButton="True" ButtonType="Button"></asp:CommandField>
                         </Columns>
-
                     </asp:GridView>
                 </div>   
             </div>
